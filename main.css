@@ -1,0 +1,32 @@
+/*Task 3*/
+.gallery-js {
+  display: flex;
+  align-items: center;
+}
+.gallery-item-js:not(:last-child) {
+  margin: 0 40px 0 0;
+}
+
+.gallery-item-js img {
+  width: 320px;
+  height: 180px;
+  margin-top: 40px;
+  margin: 0 0;
+}
+
+.gallery-item-js {
+  list-style: none;
+}
+
+/*Task 6*/
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
