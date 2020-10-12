@@ -11,6 +11,10 @@ const outputRef = document.querySelector("#name-output");
 
 inputRef.addEventListener("input", onInputChange);
 
-function onInputChange() {
-  outputRef.textContent = inputRef.value;
+function onInputChange(event) {
+  if (event.currentTarget.value === "") {
+    outputRef.textContent = "незнакомец";
+  } else {
+    outputRef.textContent = event.currentTarget.value;
+  }
 }

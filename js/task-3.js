@@ -21,18 +21,20 @@ const images = [
   },
   {
     url:
-      "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&c s=tinysrgb&dpr=2&h=750&w=1260",
     alt: "Group of Horses Running",
   },
 ];
 
 const galleryRef = document.querySelector("#gallery");
 
-images.map((option) =>
-  galleryRef.insertAdjacentHTML(
-    "beforeend",
-    `<li class="gallery-item-js"><img src="${option.url}" alt="${option.alt}"></li>`
-  )
-);
+const galleryItem = (images) =>
+  `<li class="gallery-item-js"><img src="${images.url}" alt="${images.alt}"></li>`;
+
+const galleryChainRef = images.map(galleryItem).join(``);
+
+galleryRef.insertAdjacentHTML(`afterbegin`, galleryChainRef);
+
 galleryRef.classList.add("gallery-js");
+
 console.log(galleryRef);
